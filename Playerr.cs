@@ -8,6 +8,7 @@ public class Playerr : MonoBehaviour {
 	public Text damageText;
 	public Text card01;
 	public Text card02;
+	public bool atk1;
 	private int count;              //Integer to store the number of pickups collected so far.
 	private int damage;
 	private int damage1;
@@ -54,11 +55,15 @@ public class Playerr : MonoBehaviour {
 
 	public void card1()
 	{
-		if (damage1 > 0)
+		if (damage1 > 0) {
 			damage1 = 0;
-		else
-		damage1 = Random.Range (1, 4);
+			atk1 = false;
+		} else {
+			damage1 = Random.Range (1, 4);
+			atk1 = true;
+		}
 		card01.text = damage1.ToString();
+
 	}
 	public void card2()
 	{
@@ -75,6 +80,9 @@ public class Playerr : MonoBehaviour {
 		damage2 = 0;
 		card01.text = damage1.ToString();
 		card02.text = damage2.ToString();
+		atk1 = false;
 	}
+
+
 
 }
