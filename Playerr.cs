@@ -11,7 +11,7 @@ public class Playerr : MonoBehaviour {
 	public bool atk1;
 	private int count;              //Integer to store the number of pickups collected so far.
 	private int damage;
-	private int damage1;
+	public int damage1;
 	private int damage2;
     // Use this for initialization
     void Start()
@@ -82,7 +82,5 @@ public class Playerr : MonoBehaviour {
 		card02.text = damage2.ToString();
 		atk1 = false;
 	}
-
-
 
 }
